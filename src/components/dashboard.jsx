@@ -10,15 +10,16 @@ class Dashboard extends Component {
         console.log(this.props.save)
         return (
             <div>
-                <h1>This is dashboard</h1>
+               <h1>Your Data</h1>
                 {
                     this.props.save ?
-                <h1>
-                    <h2>FirstName</h2> = <i>{this.props.save.firstName}</i><br/>
-                    <h2>LastName</h2> = <i>{this.props.save.lastName}</i><br/>
-                    <h2>Email </h2>= <i>{this.props.save.email}</i><br/>
-                    <h2>password </h2>= <i>secret..!</i><br/>
-                </h1>: ""
+                    <div>
+                    <h2>FirstName: -- <span style={{color: "blue", fontFamily: "monospace",fontSize: "38px"}}>{this.props.save.firstName}</span></h2>
+                    <h2>LastName: -- <span style={{color: "blue", fontFamily: "monospace",fontSize: "38px"}}>{this.props.save.lastName}</span></h2>
+                    <h2>Email: -- <span style={{color: "blue", fontFamily: "monospace",fontSize: "38px"}}>{this.props.save.email}</span></h2>
+                    <h2>Password: -- <span style={{color: "blue", fontFamily: "monospace",fontSize: "38px"}}>{this.props.save.password}</span></h2>
+             
+               </div> : ""
                 }
             </div>
         );
